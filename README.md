@@ -1,5 +1,6 @@
 # zuri-blog
-## Django Models - Building A Blog Application With Django 
+
+Django Models - Building A Blog Application With Django 
 
 ## Resources
 
@@ -9,28 +10,29 @@
 
 -[Django timezone.now](https://stackoverflow.com/questions/10783864/django-1-4-timezone-now-vs-datetime-datetime-now)
 
-## Create virtual env 
+#### 1. Create a virtual env 
 
 > $ python3 -m venv venv
 
-## activate virtual env
+#### 2. Activate virtual env
 
 > $ source venv/bin/activate
 
 
-## Install Django on venn
+#### 3. Install Django on venv
 
 > (venv) $ sudo pip3 install Django
 
-## Create a Django project
+#### 4. Create a Django project
 
 > $ django-admin startproject I4G000675LXH
 
-## create a Django app
+#### 5. create a Django app
 
 > $ sudo python3 manage.py startapp blog
 
-## Add the blog app to the main_projects INSTALLED_APPS. open your settings.py file
+#### 6. Add the blog app to the main_projects INSTALLED_APPS. 
+open your `settings.py` file
 ```
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -43,8 +45,8 @@ INSTALLED_APPS = [
 ]
 ```
 
-## Create a new model in the `blog` app called `Post`. It should have the following fields:
-
+#### 7. Create a new model in the `blog` app called `Post`. 
+It should have the following fields:
 Database Models.py
 ```
 from django.db import models
@@ -74,7 +76,8 @@ class Post(models.Model):
         return self.title
 ```
 
-## migrate the change into our database.
+#### 8. Migrate the change into our database.
+
 ```
 (django) $ sudo python3 manage.py makemigrations
 Migrations for 'blog':
@@ -90,15 +93,15 @@ Running migrations:
   Applying admin.0001_initial... OK
 ```
 
-## Creating An Administration Site
+#### 9. Creating An Administration Site
 
 > (django) $ sudo python3 manage.py createsuperuser
 
 > (django) $ sudo python3 manage.py runserver
 
-## Adding Models To The Administration Site
+#### 10. Adding Models To The Administration Site
 
-Open the blog/admin.py file
+Open the `blog/admin.py` file to edit with...
 
 ```
 from django.contrib import admin
