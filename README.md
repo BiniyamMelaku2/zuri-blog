@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 
 #### 7. Create a new model in the `blog` app called `Post`. 
 It should have the following fields:
-Database Models.py
+Database `Models.py`
 ```
 from django.db import models
 from django.contrib.auth.models import User
